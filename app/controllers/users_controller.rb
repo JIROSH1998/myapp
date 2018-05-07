@@ -14,7 +14,11 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    @user = User.new
+    @user = User.new(
+    image:"default_user.jpg"
+    )
+
+
   end
 
   # GET /users/1/edit
