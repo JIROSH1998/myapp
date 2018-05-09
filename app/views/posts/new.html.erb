@@ -1,7 +1,17 @@
-<main style="height:400px;"  class="bg-primary">
-  <div class = "main" style = "text-align: center; padding-top:100px">
-    <h1 class= "text-center pb-3" style="h-100">New Post</h1>
-    <%= render 'form', post: @post %>
-    <%= link_to 'Back', posts_path %>
-  </div>
-</main>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="new.css">
+  </head>
+  <body>
+
+    <main style="height:400px;"  class="bg-white">
+      <div class = "main" style = "text-align: center; padding-top:100px">
+        <h1 class= "text-center pb-3" style="h-100">New Post</h1>
+        <%= render 'form', post: @post %>
+        <%= link_to 'Back', posts_path %>
+      </div>
+    </main>
+
+  </body>
+</html>
