@@ -1,6 +1,25 @@
-<h1>Editing Post</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="new.scss">
+  </head>
+  <body>
+    <div class = "main" style = "text-align: center; bg-white" style="height:400px;" >
+        <div class = "yabou-title">
+          <h1 id ="new_post_h1"><span style="color:#FF7724; font-family:inherit;">YABOU.</span>を編集する</h1>
+        </div>
+      <%= form_tag("/posts/#{@post.id}/update", method: :post) do %>
+        <div class = "yabou-form" >
+          <label for="FormInput1" id ="form-label">いつから？いつまでに？</label>
+          <input name ="title_when" type="text" class="form-control form-font-size" style="font-size: 14px;" id="FormInput1" value="<%= @post.title_when %>">
+          <label for="FormInput2" id ="form-label">あなたの野望は？</label>
+          <input name ="title_what" type="text" class="form-control form-font-size" style="font-size: 14px;" id="FormInput2" value="<%= @post.title_what %>">
+          <label for="FormTextarea1" id ="form-label">どうやって実現する？</label>
+          <textarea name ="content" class="form-control form-control-lg" id="FormTextarea1" rows="7" style="font-size: 14px;" ><%= @post.content %></textarea>
+          <input type="submit"  class="square_btn centered" id="post_do_create" value="野望を更新">
+        </div>
+      <% end %>
+    </div>
 
-<%= render 'form', post: @post %>
-
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+  </body>
+</html>

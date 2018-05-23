@@ -7,6 +7,12 @@
       <meta name="description" content="">
       <meta name="author" content="">
 
+      <style media="screen">
+        a:hover{
+
+        }
+      </style>
+
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
       <title>YABOU.</title>
       <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -20,117 +26,83 @@
   	    		<div class="col-lg-8 col-lg-offset-2 centered">
   	    			<h1>YABOU.</h1>
   	    			<h2>野望を叫ぼう。</h2>
-              <a href="/posts/new" class="square_btn centered">新しい野望を叫ぶ</a>
-  	    		</div><!-- /col-lg-8 -->>
+              <a href="/posts/new" class="square_btn centered" id ="main_btn" style="text-decoration:none;">新しい野望を叫ぶ</a>
+  	    		</div><!-- /col-lg-8 -->
   	    	</div><!-- /row -->
   	    </div> <!-- /container -->
   	</div><!-- /hello -->
 
-  	<div id="green">
+  	<div id="orenge">
   		<div class="container">
   			<div class="row">
   				<div class="col-lg-5 centered">
   					<img src="assets/iphone.png" alt="">
   				</div>
   				<div class="col-lg-7 centered">
-  					<h3>”野望”をオモテに</h3>
-  					<p>text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
+  					<h3 class="font-weight-bold">”野望”をオモテに</h3>
+  					<p>最近、夢や希望を口にしましたか？<br>
+              本当はみんな夢や希望を持っているけど口にしない。<br>
+              だから、野望を叫ぶための場としてYABUO.は誕生しました。<br>
+              明日、来週、１ヶ月後、１年後、まだ先の将来。<br>
+              課題をやる、３キロ痩せる、恋人を作る、世界を変える。<br>
+              野望に大きさは関係ありません。なんでもいいんです。<br>
+              さぁ、あなたのYABOU.を叫びましょう。</p>
   				</div>
   			</div>
   		</div>
-  	</div>
+  	</div><!-- orenge -->
 
-  	<div class="container">
-  		<div class="row centered mt grid">
-  			<h3>OUR LATEST WORK</h3>
-  			<div class="mt"></div>
-  			<div class="col-lg-4">
-  				<a href="#"><img src="" alt=""></a>
-  			</div>
-  			<div class="col-lg-4">
-  				<a href="#"><img src="" alt=""></a>
-  			</div>
-  			<div class="col-lg-4">
-  				<a href="#"><img src="" alt=""></a>
-  			</div>
-  		</div>
+    <div class="container my-3">
+      <div class="row centered mt grid">
+        <h3>みんなのYABOU.</h3>
+        <div class="mt"></div>
+        <div class="col-lg-4">
+          <a href="#"><img src="" alt=""></a>
+        </div>
+        <div class="col-lg-4">
+          <a href="#"><img src="" alt=""></a>
+        </div>
+        <div class="col-lg-4">
+          <a href="#"><img src="" alt=""></a>
+        </div>
+      </div>
 
-  		<div class="row centered mt grid">
-  			<div class="mt"></div>
-  		</div>
-
-  		<div class="row mt centered">
-  			<div class="col-lg-7 col-lg-offset-1 mt">
-  					<p class="lead">text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
-  			</div>
-
-  			<div class="col-lg-3 mt">
-  				<p><button type="button" class="btn btn-theme btn-lg">Email Me!</button></p>
-  			</div>
-  		</div>
-  	</div>
-
-  	<div id="skills">
+      <div class="row mt centered">
+        <div class="col-lg-7 col-lg-offset-1 mt">
+            <p class="lead">text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
+        </div>
+        <div class="col-lg-3 mt">
+          <a href="/posts/new" class="square_btn centered btn-lg" id ="main_btn2" style="text-decoration:none;">新しい野望を叫ぶ</a>
+        </div>
+      </div>
+    </div>
+  	<div id="howto">
   		<div class="container">
-  			<div class="row centered">
-  				<h3>OUR SKILLS</h3>
-  				<div class="col-lg-3 mt">
-  					<canvas id="javascript" height="130" width="130"></canvas>
-  					<p>Javascript</p>
-  					<br>
-  					<script>
-  						var doughnutData = [
-  								{
-  									value: 70,
-  									color:"#74cfae"
-  								},
-  								{
-  									value : 30,
-  									color : "#3c3c3c"
-  								}
-  							];
-  							var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
-  					</script>
-  				</div>
-  				<div class="col-lg-3 mt">
-  					<canvas id="bootstrap" height="130" width="130"></canvas>
-  					<p>Bootstrap</p>
-  					<br>
-  					<script>
-  						var doughnutData = [
-  								{
-  									value: 90,
-  									color:"#74cfae"
-  								},
-  								{
-  									value : 10,
-  									color : "#3c3c3c"
-  								}
-  							];
-  							var myDoughnut = new Chart(document.getElementById("bootstrap").getContext("2d")).Doughnut(doughnutData);
-  					</script>
-  				</div>
-  				<div class="col-lg-3 mt">
-  					<canvas id="wordpress" height="130" width="130"></canvas>
-  					<p>Wordpress</p>
-  					<br>
-  					<script>
-  						var doughnutData = [
-  								{
-  									value: 65,
-  									color:"#74cfae"
-  								},
-  								{
-  									value : 35,
-  									color : "#3c3c3c"
-  								}
-  							];
-  							var myDoughnut = new Chart(document.getElementById("wordpress").getContext("2d")).Doughnut(doughnutData);
-  					</script>
-  				</div>
+        <h3 class="">YABOU.の作り方</h3>
+  				<<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+          <div class="row mt centered">
+            <div class="col-lg-3" id="step" style="background-color:#24FBFF;">
+              <h4>いつまでに？</h4>
+              <p>いつから始めるか、<br>
+                いつまでに実現させるか、<br>
+                期間を定めましょう。</p>
+            </div>
+            <div class="col-lg-3" id="step" style="background-color:#FF9E59;">
+              <h4>あなたの野望は？</h4>
+              <p>あなたの持つ野望を<br>
+                バシっと宣言しましょう。<br>
+                後戻りできなくなるくらいに力強く。</p>
+            </div>
+            <div class="col-lg-3" id="step" style="background-color:#FF7A1A;">
+              <h4>どうやって実現する？</h4>
+              <p>その野望を実現、<br>達成するために<br>
+                どんな行動・努力をするか<br>
+                はっきりと宣言しよう！</p>
+            </div>
+          </div>
   			</div><!-- /row -->
   		</div><!-- /container -->
-  	</div><!-- /skills -->
+  	</div><!-- /howto -->
 
   	<section id="contact"></section>
   	<div id="social">

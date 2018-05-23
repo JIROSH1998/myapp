@@ -1,19 +1,23 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Twitter:</strong>
-  <%= @user.uid %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/styleseets/user_show">
+  </head>
+<body>
+  <div class="container" id="main_wrapper">
+    <h1 class="py-3" style="margin: 25px 90px 0px 90px;">#{user.name}</h1>
+    <div class="left_wrapper col-lg-6 centered ">
+      <div class="post_container border border-dark rounded" >
+        <img src="" alt="">
+      </div>
+    </div><!-- /left_wrapper -->
+    <div class="right_wrapper col-lg-4">
+      <div class="show_user_info">
+        <label for="FormInput1" id ="form-label">USER NAME :</label>
+        <h2 class=""><%= @user.name %></h2>
+        <label for="FormInput2" id ="form-label">TWITTER_ID :</label>
+        <h2 class=""><%= @user.uid %></h2>
+      </div>
+    </div><!-- /right_wrapper -->
+  </div><!-- /main_wrapper -->
+</body>

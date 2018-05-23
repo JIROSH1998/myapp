@@ -1,6 +1,7 @@
 /* FONTS */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
 
 /* OVERALL ASPECT */
 
@@ -10,7 +11,6 @@ body {
     font-weight: 300;
     font-size: 16px;
     color: #555;
-
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 
@@ -38,7 +38,6 @@ p {
 a {
     color: #f85c37;
     word-wrap: break-word;
-
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
     -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
     -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -50,7 +49,7 @@ a:hover,
 a:focus {
     color: #7b7b7b;
     text-decoration: none;
-    outline: 0;
+    outline: 0
 }
 
 a:before,
@@ -60,6 +59,7 @@ a:after {
     -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
     -o-transition: color 0.1s ease-in, background 0.1s ease-in;
     transition: color 0.1s ease-in, background 0.1s ease-in;
+    text-decoration:none;
 }
 
 /* Bootstrap Modifications */
@@ -96,8 +96,8 @@ a:after {
 /* hello */
 #hello {
 	width: 100%;
-	padding-top: 180px;
-	padding-bottom: 140px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 
 #hello h1 {
@@ -112,42 +112,73 @@ a:after {
 	font-weight: 400;
 }
 
-/* Green */
-#green {
+#main_btn{
+  margin-top: 45px;
+}
+
+#main_btn2{
+  margin-top: 0px;
+}
+
+/* orenge */
+#orenge {
 	background-color: #FF7724;
-	padding-top: 50px;
+	padding-top: 40px;
 	margin-bottom: 0px;
 }
 
-#green h3 {
+#orenge h3 {
 	color: white;
 	font-weight: 400;
-	margin-bottom: 35px;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
-#green p {
+#orenge p {
 	color: white;
 	font-weight: 400;
 	font-size: 20px;
+  text-align: right;
+  padding-bottom: 10px;
+  line-height: 32px;
+
 }
 
-/* Skills */
-#skills {
+/* howto */
+#howto {
 	background-color: #4e4e4e;
 	padding-top: 50px;
 	padding-bottom: 50px;
-	margin-top: 50px;
 }
 
-#skills h3 {
+#howto h3 {
 	color: white;
 }
 
-#skills p {
+#howto p {
 	color: white;
 	font-weight: 400;
 }
 
+#step{
+  width: 200px;
+  height: 240px;
+  margin: 0 40px;
+}
+
+#step h4{
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#step p{
+  font-size: 20px;
+  padding-top: 20px;
+  height:168px;
+  line-height: 24px;
+  text-align: left;
+}
 /* Social Links */
 #social {
 	width: 100%;
@@ -157,7 +188,7 @@ a:after {
 
 #social i {
 	font-size: 50px;
-	color: #FF7724;
+	color: #4e4e4e;
 }
 
 #social .col-md-3:hover {
@@ -187,3 +218,65 @@ a:after {
 .grid img:hover {
     opacity: 1;
 }
+
+/* Icon */
+
+	.icon {
+		text-decoration: none;
+		position: relative;
+	}
+
+		.icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
+		}
+
+		.icon > .label {
+			display: none;
+		}
+
+		.icon.style2 {
+			-moz-transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+			-webkit-transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+			-ms-transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+			transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+			background-color: transparent;
+			border: solid 1px #c9c9c9;
+			border-radius: 4px;
+			width: 4em;
+			height: 4em;
+			display: inline-block;
+			text-align: center;
+			line-height: 4em;
+			color: inherit;
+		}
+
+			.icon.style2:before {
+				font-size: 1.8em;
+			}
+
+			.icon.style2:hover {
+				color: #f2849e;
+				border-color: #f2849e;
+        text-decoration:none;
+			}
+
+			.icon.style2:active {
+				background-color: rgba(242, 132, 158, 0.1);
+			}
+
+/* List */
+		ul.icons {
+			cursor: default;
+			list-style: none;
+			padding-left: 0;
+			margin: -1em 0 2em -1em;
+		}
+
+			ul.icons li {
+				display: inline-block;
+				padding: 1rem 2rem;
+			}

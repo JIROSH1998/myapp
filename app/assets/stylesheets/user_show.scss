@@ -1,0 +1,46 @@
+body{
+  height:600px;
+}
+
+#main_wrapper{
+  padding: 25px auto;
+}
+.right_wrapper{
+  height:340px;
+  margin:20px 90px;
+  background-color: #D3D3D3	;
+}
+
+.left_wrapper{
+background-color:white;
+width:548px;
+padding-left:100px;
+}
+
+.post_container{
+  width:400px;
+  height:340px;
+  margin: 20px auto;
+  background-color:#FF7724;
+}
+
+.square_btn_edit{
+  display: inline-block;
+  padding: 10px 50px;
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 2px #FF7724;
+  border-radius: 3px;
+  transition: .4s;
+  font-size: 16px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+.square_btn_edit:hover {
+    background: #FF7724;
+    color: white;
+}
+
+#share_icon{
+  border-bottom: none;
+}

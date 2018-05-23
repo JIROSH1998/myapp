@@ -1,14 +1,77 @@
 <p id="notice"><%= notice %></p>
+<head>
+  <style media="screen">
+    body{
+      height:600px;
+    }
+    .show_user{
+      height:340px;
+      margin:20px 90px;
+      background-color: #D3D3D3	;
+    }
+    .square_btn_edit{
+      display: inline-block;
+      padding: 10px 50px;
+      text-decoration: none;
+      color: #67c5ff;
+      border: solid 2px #FF7724;
+      border-radius: 3px;
+      transition: .4s;
+      font-size: 16px;
+      margin-top: 30px;
+      font-weight: bold;
+  }
+    .square_btn_edit:hover {
+        background: #FF7724;
+        color: white;
+    }
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+    #share_icon{
+      border-bottom: none;
+    }
+  }
+  </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  </head>
+<body>
+  <div class="container" style="height:600px;">
+    <h1 class="py-3">YABOU.の内容</h1>
+      <div class="each_post col-lg-6 centered " style="background-color:white; height:600px; width:548px; padding: 0px;">
+        <div class="post_container border border-dark rounded" style="width:548px; height:340px; background-color:#FF7724; margin-top:20px;">
+          <div class="post_title">
+            <h2 class="when"><%= @post.title_when %></h2>
+            <h2 class="what"><%= @post.title_what %></h2>
+          </div>
+          <div class="post_content">
+            <p class="post_content"><%= @post.content %></p>
+          </div>
+        </div>
+          <h4 class="" style="font-size:20px; line-height:58px; margin-top:25px;">SNSでYABOU.をシェアしよう！</h4>
+        <div class="share_btn">
+          <div id="show_social" style="padding:0px">
+            <ul class="icons" >
+              <li><a href="#" class="icon style2 fab fa-twitter"><span class="label">Twitter</span></a></li>
+              <li><a href="#" class="icon style2 fab fa-facebook"><span class="label">Facebook</span></a></li>
+              <li><a href="#" class="icon style2 fab fa-instagram"><span class="label">Instagram</span></a></li>
+            </ul>
+        	</div><!-- /social -->
+        </div>
+      </div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+    <div class="show_user col-lg-4">
+      <div class="show_user_info">
+        <label for="FormInput1" id ="form-label">USER NAME :</label>
+        <h2 class=""><%= @user.name %></h2>
+        <label for="FormInput2" id ="form-label">TWITTER_ID :</label>
+        <h2 class=""><%= @user.uid %></h2>
+      </div>
+      <% id = @post.id %>
+      <%= link_to  ({ :controller => :posts, :action => :edit, :id => id}), { :class => "link_class", :target => "_blank"} do %>
+      <p>EDIT</p>
+      <% end %>
+      <%= link_to  ({ :controller => :posts, :action => :destroy, :id => id}), { :class => "link_class", :target => "_blank"} do %>
+      <p>削除</p>
+      <% end %>
+    </div>
+  </div>
+</body>

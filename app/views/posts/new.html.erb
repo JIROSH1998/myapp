@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="new.css">
+    <link rel="stylesheet" type="text/css" href="new.scss">
   </head>
   <body>
+    <div class = "main" style = "text-align: center; bg-white" style="height:400px;" >
+        <div class = "yabou-title">
+          <h1 id ="new_post_h1"><span style="color:#FF7724; font-family:inherit;">YABOU.</span>を宣言しよう</h1>
+        </div>
 
-    <main style="height:400px;"  class="bg-white">
-      <div class = "main" style = "text-align: center; padding-top:100px">
-        <h1 class= "text-center pb-3" style="h-100">New Post</h1>
-        <%= render 'form', post: @post %>
-        <%= link_to 'Back', posts_path %>
-      </div>
-    </main>
-
+        <%= form_tag("/posts/create", method: :post) do %>
+          <div class = "yabou-form" >
+            <label for="FormInput1" id ="form-label">いつから？いつまでに？</label>
+            <input name ="title_when" type="text" class="form-control form-font-size" style="font-size: 14px;" id="FormInput1" placeholder="2019年3月から">
+            <label for="FormInput2" id ="form-label">あなたの野望は？</label>
+            <input name ="title_what" type="text" class="form-control form-font-size" style="font-size: 14px;" id="FormInput2" placeholder="世界一周するぞ！！">
+            <label for="FormTextarea1" id ="form-label">どうやって実現する？</label>
+            <textarea name ="content" class="form-control form-control-lg" id="FormTextarea1" rows="7" style="font-size: 14px;" placeholder="（例）全５０カ国を、企業訪問・インタビューしながら周ります。まずはタイからスタート。写真もいっぱい撮るよ！"></textarea>
+            <input type="submit"  class="square_btn centered" id="post_do_create" value="野望を叫ぶ">
+          </div>
+        <% end %>
+    </div>
   </body>
 </html>
